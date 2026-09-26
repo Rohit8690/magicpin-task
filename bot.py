@@ -8,6 +8,9 @@ import re
 import time
 
 app = FastAPI(title="Vera - Magicpin AI Challenge", version="1.0.0")
+@app.get("/")
+def root():
+    return {"status": "ok", "message": "Vera API is running"}
 
 # ---------------------------------------------------------------------------
 # In-memory context store
